@@ -6,13 +6,106 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="28dp"
+        android:ems="10"
+        android:hint="ilk sayıyı giriniz"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/editText2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="14dp"
+        android:ems="10"
+        android:hint="ikinci sayıyı giriniz"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <TextView
+        android:id="@+id/sonuc"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="199dp"
+        android:hint="Sonuç"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="297dp"
+        android:layout_height="82dp"
+        android:layout_marginBottom="13dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/sonuc"
+        app:layout_constraintStart_toStartOf="@+id/editText2"
+        app:layout_constraintTop_toBottomOf="@+id/editText2">
+
+        <Button
+            android:id="@+id/btn_toplama"
+            android:layout_width="62dp"
+            android:layout_height="56dp"
+            android:onClick="topla"
+            android:text="+" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btn_cikarma"
+            android:layout_width="62dp"
+            android:layout_height="56dp"
+            android:onClick="cikar"
+            android:text="-" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btn_carpma"
+            android:layout_width="62dp"
+            android:layout_height="56dp"
+            android:onClick="carp"
+            android:text="*" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btn_bolme"
+            android:layout_width="62dp"
+            android:layout_height="56dp"
+            android:onClick="bol"
+            android:text="/" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
